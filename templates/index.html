@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Converter vídeos do YouTube para MP3 de forma rápida e fácil.">
+    <meta name="keywords" content="YouTube, MP3, conversor, download, áudio">
+    <meta name="author" content="BR Converter">
+    <meta name="theme-color" content="#35d03b">
+    <link rel="icon" href="/static/image/icon.png" type="image/png">
+    <title>BR Converter - Conversor MP3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="/static/css/static.css">
+</head>
+<body>
+    <header>
+        <img src="/static/image/icon.png" alt="logo">
+    </header>
+
+    <main>
+        <h1>Baixe Musicas Grátis</h1>
+        <p>Converter vídeos do YouTube para MP3 de forma rápida e fácil.</p>
+
+            <form method="POST" onsubmit="showLoading()">
+                <label for="youtube_url"><i class="bi bi-link-45deg"></i>Cole o link do vídeo do YouTube</label>
+                <div class="src">
+                    <input type="text" name="youtube_url" placeholder="https://www.youtube.com/LINK_DO_SEU_VIDEO" required>
+                    <button type="submit">
+                        <span class="icon"><i class="bi bi-headphones"></i></span>
+                        <span class="txt">Converter</span>
+                    </button>
+                </div>
+                
+            </form>
+
+            <!-- Spinner (escondido inicialmente) -->
+            <div id="loadingSpinner" class="spinner hidden"></div>
+
+            <!-- Thumbnail (aparece após conversão) -->
+            {% if thumbnail %}
+                <div id="thumbnailContainer" class="thumbnailContainer">
+                    <h2>{{ title }}</h2>
+                    <img src="{{ thumbnail }}" alt="Thumbnail" >
+                    <br>
+                    <div class="btn">
+                       <a href="/download/{{ video_id }}"><i class="bi bi-cloud-download"></i>Baixar MP3</a> 
+                    </div>
+                    
+                </div>
+            {% endif %}
+    </main>
+
+    <footer>
+        <div class="br">
+            <img src="/static/image/9.png" alt="">
+            <div class="redes">
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        <p>© Copyright - 2025</p>
+        <p>Desenvolvido por Bryan Rodrigues</p>
+    </footer>
+
+    
+
+    <script>
+        function showLoading() {
+            const spinner = document.getElementById("loadingSpinner");
+            const thumb = document.getElementById("thumbnailContainer");
+            if (thumb) {
+                thumb.remove(); // Remove thumbnail anterior
+            }
+            spinner.classList.remove("hidden"); // Mostra o spinner
+        }
+    </script>
+
+</body>
+</html>
+
+
