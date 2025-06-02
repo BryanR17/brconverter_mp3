@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/4M7IWwP.png" alt="BR Converter Logo" width="120" />
+  <img src="/static/image/1.png" alt="BR Converter Logo" width="120" />
   <h1>🎧 BR Converter</h1>
   <p><strong>Converta vídeos do YouTube para MP3 com facilidade, estilo e rapidez.</strong></p>
 
