@@ -79,7 +79,7 @@ FFmpeg instalado no sistema (para o yt_dlp funcionar corretamente)
 Navegador atualizado
 
 ## 💡 Versão Desktop
-Em breve, também estará disponível uma versão desktop do BR Converter feita com customtkinter, ideal para quem prefere usar a ferramenta offline e localmente em seu computador. 🚧
+A pasta **Conversor Br - CTK**, é a pasta onde está o arquivo Python com o framework CustomTKinter para o APP Local
 
 ## 📄 Licença
 Este projeto está licenciado sob a licença MIT.
