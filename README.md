@@ -74,7 +74,7 @@ python app.py
 ## 📦 Requisitos
 Python 3.11 ou superior
 
-FFmpeg instalado no sistema (para o yt_dlp funcionar corretamente)
+FFmpeg instalado no sistema (para o yt_dlp funcionar corretamente) (https://ffmpeg.org/download.html)
 
 Navegador atualizado
 
